@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdmin.master.cs" Inherits="Project.SiteAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        img{
+            height:70px;
+            width:70px;
+        }
+    </style>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <link href="SideBarCSS/CSS/StyleSheet1.css" rel="stylesheet" />
+    <link href="Content/bootstrap-datepicker.standalone.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div class="d-flex" id="wrapper">
+            <div class="bg-light border-light" id="sidebar-wrapper">
+                <div class="sidebar-heading">
+                    <p class="text-center text-warning">Broadband Information System</p>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="AdminPanel.aspx" class="list-group-item list-group-item-action bg-primary rounded-pill text-white text-center mt-2 ml-2">Home</a>
+                    <a href="PackagePlan.aspx" class="list-group-item list-group-item-action bg-primary rounded-pill text-white text-center mt-2 ml-2">Plan</a>
+                    <a href="OfficeAddress.aspx" class="list-group-item list-group-item-action bg-primary rounded-pill text-white text-center mt-2 ml-2">Address</a>
+                    <a href="ServiceArea.aspx" class="list-group-item list-group-item-action bg-primary rounded-pill text-white text-center mt-2 ml-2">Area</a>
+                    <a href="Feedback.aspx" class="list-group-item list-group-item-action bg-primary rounded-pill text-white text-center mt-2 ml-2">Feedback</a>
+                    <a href="LockedAccount.aspx" class="list-group-item list-group-item-action bg-primary rounded-pill text-white text-center mt-2 ml-2">Account</a>
+                </div>
+            </div>
+
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button type="button" id="menu-tuggle" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                </nav>
+                <asp:ContentPlaceHolder ID="mainContent" runat="server">
+
+                </asp:ContentPlaceHolder>
+                <div class="container-fluid">
+                    
+                </div>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="footerContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <script type="text/javascript">
+            $("#menu-tuggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+    </form>
+    
+</body>
+</html>

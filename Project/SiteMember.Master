@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMember.master.cs" Inherits="Project.SiteMember" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        img{
+            height:70px;
+            width:70px;
+        }
+    </style>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-dark navbar-expand-sm bg-primary">
+            <img src="/ProjectLogo/IDB Logo.png" class="navbar-brand rounded-circle" />
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#" class="nav-link active text-white">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Plan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Area Coverage</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Office Address</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="footerContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
